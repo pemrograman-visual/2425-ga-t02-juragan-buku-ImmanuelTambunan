@@ -21,7 +21,6 @@ public class T02 {
         minimumMargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
-        kategori = input.nextLine();
         if (rating >= 4.7) {
             kategori = "Best Pick";
         } else {

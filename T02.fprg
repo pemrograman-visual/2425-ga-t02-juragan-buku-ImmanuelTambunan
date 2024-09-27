@@ -4,9 +4,9 @@
         <attribute name="name" value="T02 JURAGAN BUKU (PAIRED ASSIGNMENT)"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 02:10:42 PM"/>
+        <attribute name="saved" value="2024-09-27 02:15:54 PM"/>
         <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDowNTozMiBBTTsyNTk0"/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjoxMDo0MiBQTTs3OzI3MjE="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjoxNTo1NCBQTTs4OzI3MzA="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -24,7 +24,6 @@
             <input variable="MinimumMargin"/>
             <input variable="Stok"/>
             <input variable="rating"/>
-            <input variable="Kategori"/>
             <if expression="rating&gt;=4.7">
                 <then>
                     <assign variable="kategori" expression="&quot;Best Pick&quot;"/>
