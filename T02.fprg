@@ -4,9 +4,9 @@
         <attribute name="name" value="T02 JURAGAN BUKU (PAIRED ASSIGNMENT)"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 01:55:29 PM"/>
+        <attribute name="saved" value="2024-09-27 02:06:30 PM"/>
         <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDowNTozMiBBTTsyNTk0"/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMTo1NToyOSBQTTs0OzI3MzE="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjowNjozMCBQTTs2OzI3MjI="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -44,7 +44,7 @@
                                             <assign variable="kategori" expression="&quot;Average&quot;"/>
                                         </then>
                                         <else>
-                                            <if expression="rating&lt;=3.0">
+                                            <if expression="rating&lt;3.0">
                                                 <then>
                                                     <assign variable="kategori" expression="&quot;Low&quot;"/>
                                                 </then>
@@ -60,7 +60,7 @@
                     </if>
                 </else>
             </if>
-            <output expression="ISBN&amp;&quot;|&quot;&amp;judul&amp;&quot;|&quot;&amp;penulis&amp;&quot;|&quot;&amp;TahunTerbit&amp;&quot;|&quot;&amp;penerbit&amp;&quot;|&quot;&amp;FormatBukuElektronik&amp;&quot;|&quot;&amp;HargaPembelian&amp;&quot;|&quot;&amp;MinimumMargin&amp;&quot;|&quot;&amp;stok&amp;&quot;|&quot;&amp;rating&amp;&quot;|&quot;&amp;kategori" newline="True"/>
+            <output expression="ISBN&amp;&quot;|&quot;&amp;judul&amp;&quot;|&quot;&amp;penulis&amp;&quot;|&quot;&amp;TahunTerbit&amp;&quot;|&quot;&amp;penerbit&amp;&quot;|&quot;&amp;FormatBukuElektronik&amp;&quot;|&quot;&amp;HargaPembelian&amp;&quot;|&quot;&amp;MinimumMargin&amp;&quot;|&quot;&amp;stok&amp;&quot;|&quot;&amp;ToFixed(rating, 1)&amp;&quot;|&quot;&amp;kategori" newline="True"/>
         </body>
     </function>
 </flowgorithm>
