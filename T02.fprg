@@ -1,30 +1,31 @@
 <?xml version="1.0"?>
 <flowgorithm fileversion="4.2">
     <attributes>
-        <attribute name="name" value="T02 JURAGAN BUKU (PAIRED ASSIGNMENT)"/>
+        <attribute name="name" value="t01"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 02:15:54 PM"/>
-        <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDowNTozMiBBTTsyNTk0"/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjoxNTo1NCBQTTs4OzI3MzA="/>
+        <attribute name="saved" value="2024-09-27 11:10:35 AM"/>
+        <attribute name="created" value="QVNVUztMQVBUT1AtQ0I4SzRBVDk7MjAyNC0wOS0wNjsxMDo1NjoyOCBBTTsyNjIx"/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQ0I4SzRBVDk7MjAyNC0wOS0yNzsxMToxMDozNSBBTTs1OzI3MjU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="ISBN, judul, penulis, penerbit, FormatBukuElektronik, kategori" type="String" array="False" size=""/>
-            <declare name="TahunTerbit, stok" type="Integer" array="False" size=""/>
-            <declare name="HargaPembelian, rating, MinimumMargin" type="Real" array="False" size=""/>
-            <input variable="ISBN"/>
+            <declare name="kodeisbn, judul, penulis, penerbit, formatbuku" type="String" array="False" size=""/>
+            <declare name="kategori" type="String" array="False" size=""/>
+            <declare name="tahunterbit, stok" type="Integer" array="False" size=""/>
+            <declare name="hargapembelian, minimummargin, rating" type="Real" array="False" size=""/>
+            <input variable="kodeisbn"/>
             <input variable="judul"/>
             <input variable="penulis"/>
-            <input variable="TahunTerbit"/>
+            <input variable="tahunterbit"/>
             <input variable="penerbit"/>
-            <input variable="FormatBukuElektronik"/>
-            <input variable="HargaPembelian"/>
-            <input variable="MinimumMargin"/>
-            <input variable="Stok"/>
+            <input variable="formatbuku"/>
+            <input variable="hargapembelian"/>
+            <input variable="minimummargin"/>
+            <input variable="stok"/>
             <input variable="rating"/>
-            <if expression="rating&gt;=4.7">
+            <if expression="rating &gt;=4.7">
                 <then>
                     <assign variable="kategori" expression="&quot;Best Pick&quot;"/>
                 </then>
@@ -36,7 +37,7 @@
                         <else>
                             <if expression="rating&gt;=4.0">
                                 <then>
-                                    <assign variable="kategori" expression="&quot;Recommanded&quot;"/>
+                                    <assign variable="kategori" expression="&quot;Recommended&quot;"/>
                                 </then>
                                 <else>
                                     <if expression="rating&gt;=3.0">
@@ -53,7 +54,7 @@
                     </if>
                 </else>
             </if>
-            <output expression="ISBN&amp;&quot;|&quot;&amp;judul&amp;&quot;|&quot;&amp;penulis&amp;&quot;|&quot;&amp;TahunTerbit&amp;&quot;|&quot;&amp;penerbit&amp;&quot;|&quot;&amp;FormatBukuElektronik&amp;&quot;|&quot;&amp;HargaPembelian&amp;&quot;|&quot;&amp;MinimumMargin&amp;&quot;|&quot;&amp;stok&amp;&quot;|&quot;&amp;ToFixed(rating, 1)&amp;&quot;|&quot;&amp;kategori" newline="True"/>
+            <output expression="kodeisbn&amp; &quot;|&quot; &amp;judul&amp; &quot;|&quot; &amp;penulis&amp; &quot;|&quot; &amp;tahunterbit&amp; &quot;|&quot; &amp;penerbit&amp; &quot;|&quot; &amp;formatbuku&amp; &quot;|&quot; &amp;hargapembelian&amp; &quot;|&quot; &amp;minimummargin&amp; &quot;|&quot; &amp;stok&amp; &quot;|&quot; &amp;tofixed(rating,1)&amp; &quot;|&quot;&amp;kategori" newline="True"/>
         </body>
     </function>
 </flowgorithm>

@@ -7,18 +7,19 @@ public class T02 {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String iSBN, judul, penulis, penerbit, formatBukuElektronik, kategori;
-        int tahunTerbit, stok;
-        double hargaPembelian, rating, minimumMargin;
+        String kodeisbn, judul, penulis, penerbit, formatbuku;
+        String kategori;
+        int tahunterbit, stok;
+        double hargapembelian, minimummargin, rating;
 
-        iSBN = input.nextLine();
+        kodeisbn = input.nextLine();
         judul = input.nextLine();
         penulis = input.nextLine();
-        tahunTerbit = Integer.parseInt(input.nextLine());
+        tahunterbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
-        formatBukuElektronik = input.nextLine();
-        hargaPembelian = Double.parseDouble(input.nextLine());
-        minimumMargin = Double.parseDouble(input.nextLine());
+        formatbuku = input.nextLine();
+        hargapembelian = Double.parseDouble(input.nextLine());
+        minimummargin = Double.parseDouble(input.nextLine());
         stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
         if (rating >= 4.7) {
@@ -28,7 +29,7 @@ public class T02 {
                 kategori = "Must Read";
             } else {
                 if (rating >= 4.0) {
-                    kategori = "Recommanded";
+                    kategori = "Recommended";
                 } else {
                     if (rating >= 3.0) {
                         kategori = "Average";
@@ -38,7 +39,7 @@ public class T02 {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
+        System.out.println(kodeisbn + "|" + judul + "|" + penulis + "|" + tahunterbit + "|" + penerbit + "|" + formatbuku + "|" + hargapembelian + "|" + minimummargin + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
     }
     
     private static String toFixed(double value, int digits) {
