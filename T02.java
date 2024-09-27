@@ -13,13 +13,13 @@ public class T02 {
         iSBN = input.nextLine();
         judul = input.nextLine();
         penulis = input.nextLine();
-        tahunTerbit = input.nextDouble();
+        tahunTerbit = Double.parseDouble(input.nextLine());
         penerbit = input.nextLine();
         formatBukuElektronik = input.nextLine();
-        hargaPembelian = input.nextDouble();
-        minimumMargin = input.nextDouble();
-        stok = input.nextDouble();
-        rating = input.nextDouble();
+        hargaPembelian = Double.parseDouble(input.nextLine());
+        minimumMargin = Double.parseDouble(input.nextLine());
+        stok = Double.parseDouble(input.nextLine());
+        rating = Double.parseDouble(input.nextLine());
         kategori = input.nextLine();
         if (rating >= 4.7 && rating <= 5) {
             kategori = "Best Pick";
