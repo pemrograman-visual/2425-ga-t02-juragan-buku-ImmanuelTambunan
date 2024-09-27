@@ -1,10 +1,9 @@
 // 12S24021 - Ika Manurung
 // 12S24034 - Immanuel Tambunan
-
 import java.util.*;
 import java.lang.Math;
 
-public class T02 {
+public class Program {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -22,20 +21,22 @@ public class T02 {
         stok = input.nextDouble();
         rating = input.nextDouble();
         kategori = input.nextLine();
-        if (rating >= 4.7) {
+        if (rating >= 4.7 && rating <= 5) {
             kategori = "Best Pick";
         } else {
-            if (rating >= 4.5) {
+            if (rating >= 4.5 && rating <= 5) {
                 kategori = "Must Read";
             } else {
-                if (rating >= 4.0) {
+                if (rating >= 4.0 && rating <= 5) {
                     kategori = "Recommanded";
                 } else {
-                    if (rating >= 3.0) {
+                    if (rating >= 3.0 && rating <= 5) {
                         kategori = "Average";
                     } else {
-                        if (rating <= 3.0) {
+                        if (rating <= 3.0 && rating <= 5) {
                             kategori = "Low";
+                        } else {
+                            kategori = "Error";
                         }
                     }
                 }

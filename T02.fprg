@@ -4,9 +4,9 @@
         <attribute name="name" value="T02 JURAGAN BUKU (PAIRED ASSIGNMENT)"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 10:58:12 AM"/>
+        <attribute name="saved" value="2024-09-27 10:36:40 AM"/>
         <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDowNTozMiBBTTsyNTk0"/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDo1ODoxMiBBTTsyOzI3MDk="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDozNjo0MCBBTTsxOzI3MDU="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -24,33 +24,31 @@
             <input variable="Stok"/>
             <input variable="rating"/>
             <input variable="Kategori"/>
-            <if expression="rating&gt;=4.7&amp;&amp;rating&lt;=5">
+            <if expression="rating&gt;=4.7">
                 <then>
                     <assign variable="kategori" expression="&quot;Best Pick&quot;"/>
                 </then>
                 <else>
-                    <if expression="rating&gt;=4.5&amp;&amp;rating&lt;=5">
+                    <if expression="rating&gt;=4.5">
                         <then>
                             <assign variable="kategori" expression="&quot;Must Read&quot;"/>
                         </then>
                         <else>
-                            <if expression="rating&gt;=4.0&amp;&amp;rating&lt;=5">
+                            <if expression="rating&gt;=4.0">
                                 <then>
                                     <assign variable="kategori" expression="&quot;Recommanded&quot;"/>
                                 </then>
                                 <else>
-                                    <if expression="rating&gt;=3.0&amp;&amp;rating&lt;=5">
+                                    <if expression="rating&gt;=3.0">
                                         <then>
                                             <assign variable="kategori" expression="&quot;Average&quot;"/>
                                         </then>
                                         <else>
-                                            <if expression="rating&lt;=3.0&amp;&amp;rating&lt;=5">
+                                            <if expression="rating&lt;=3.0">
                                                 <then>
                                                     <assign variable="kategori" expression="&quot;Low&quot;"/>
                                                 </then>
-                                                <else>
-                                                    <assign variable="kategori" expression="&quot;Error&quot;"/>
-                                                </else>
+                                                <else/>
                                             </if>
                                         </else>
                                     </if>
