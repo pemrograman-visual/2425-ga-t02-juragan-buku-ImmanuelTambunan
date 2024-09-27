@@ -4,15 +4,16 @@
         <attribute name="name" value="T02 JURAGAN BUKU (PAIRED ASSIGNMENT)"/>
         <attribute name="authors" value="ASUS"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-09-27 02:06:30 PM"/>
+        <attribute name="saved" value="2024-09-27 02:10:42 PM"/>
         <attribute name="created" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzsxMDowNTozMiBBTTsyNTk0"/>
-        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjowNjozMCBQTTs2OzI3MjI="/>
+        <attribute name="edited" value="QVNVUztMQVBUT1AtQUMyUVI5MzI7MjAyNC0wOS0yNzswMjoxMDo0MiBQTTs3OzI3MjE="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <declare name="ISBN, judul, penulis, penerbit, FormatBukuElektronik, kategori" type="String" array="False" size=""/>
-            <declare name="TahunTerbit, stok, HargaPembelian, rating, MinimumMargin" type="Real" array="False" size=""/>
+            <declare name="TahunTerbit, stok" type="Integer" array="False" size=""/>
+            <declare name="HargaPembelian, rating, MinimumMargin" type="Real" array="False" size=""/>
             <input variable="ISBN"/>
             <input variable="judul"/>
             <input variable="penulis"/>
@@ -44,14 +45,7 @@
                                             <assign variable="kategori" expression="&quot;Average&quot;"/>
                                         </then>
                                         <else>
-                                            <if expression="rating&lt;3.0">
-                                                <then>
-                                                    <assign variable="kategori" expression="&quot;Low&quot;"/>
-                                                </then>
-                                                <else>
-                                                    <assign variable="kategori" expression="&quot;Error&quot;"/>
-                                                </else>
-                                            </if>
+                                            <assign variable="kategori" expression="&quot;Low&quot;"/>
                                         </else>
                                     </if>
                                 </else>

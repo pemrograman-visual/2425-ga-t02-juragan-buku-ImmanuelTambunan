@@ -3,22 +3,23 @@
 import java.util.*;
 import java.lang.Math;
 
-public class T02 {
+public class JavaApplication {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
         String iSBN, judul, penulis, penerbit, formatBukuElektronik, kategori;
-        double tahunTerbit, stok, hargaPembelian, rating, minimumMargin;
+        int tahunTerbit, stok;
+        double hargaPembelian, rating, minimumMargin;
 
         iSBN = input.nextLine();
         judul = input.nextLine();
         penulis = input.nextLine();
-        tahunTerbit = Double.parseDouble(input.nextLine());
+        tahunTerbit = Integer.parseInt(input.nextLine());
         penerbit = input.nextLine();
         formatBukuElektronik = input.nextLine();
         hargaPembelian = Double.parseDouble(input.nextLine());
         minimumMargin = Double.parseDouble(input.nextLine());
-        stok = Double.parseDouble(input.nextLine());
+        stok = Integer.parseInt(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
         kategori = input.nextLine();
         if (rating >= 4.7) {
@@ -33,11 +34,7 @@ public class T02 {
                     if (rating >= 3.0) {
                         kategori = "Average";
                     } else {
-                        if (rating < 3.0) {
-                            kategori = "Low";
-                        } else {
-                            kategori = "Error";
-                        }
+                        kategori = "Low";
                     }
                 }
             }
