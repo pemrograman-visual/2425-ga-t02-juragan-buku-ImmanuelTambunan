@@ -21,19 +21,19 @@ public class T02 {
         stok = Double.parseDouble(input.nextLine());
         rating = Double.parseDouble(input.nextLine());
         kategori = input.nextLine();
-        if (rating >= 4.7 && rating <= 5) {
+        if (rating >= 4.7) {
             kategori = "Best Pick";
         } else {
-            if (rating >= 4.5 && rating <= 5) {
+            if (rating >= 4.5) {
                 kategori = "Must Read";
             } else {
-                if (rating >= 4.0 && rating <= 5) {
+                if (rating >= 4.0) {
                     kategori = "Recommanded";
                 } else {
-                    if (rating >= 3.0 && rating <= 5) {
+                    if (rating >= 3.0) {
                         kategori = "Average";
                     } else {
-                        if (rating <= 3.0 && rating <= 5) {
+                        if (rating <= 3.0) {
                             kategori = "Low";
                         } else {
                             kategori = "Error";
@@ -42,10 +42,6 @@ public class T02 {
                 }
             }
         }
-        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + toFixed(rating,1) + "|" + kategori);
-    }
-    
-    private static String toFixed(double value, int digits) {
-        return String.format("%." + digits + "f", value);
+        System.out.println(iSBN + "|" + judul + "|" + penulis + "|" + tahunTerbit + "|" + penerbit + "|" + formatBukuElektronik + "|" + hargaPembelian + "|" + minimumMargin + "|" + stok + "|" + rating + "|" + kategori);
     }
 }
